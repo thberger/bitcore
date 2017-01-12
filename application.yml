@@ -1,0 +1,6 @@
+stashserver:
+  base-url: https://src.openvz.org
+  project: OVZ
+  repo: openvz-docs
+  username:
+  password:

@@ -1,0 +1,159 @@
+{
+  "size": 25,
+  "limit": 25,
+  "isLastPage": false,
+  "values": [
+    {
+      "id": "refs/tags/cuckoo-16.3.1",
+      "displayId": "cuckoo-16.3.1",
+      "latestChangeset": "3d1c2d1554c814d8913eea9c5e047f224dd22e39",
+      "hash": "a298256e794006943a6fdbfae2421e90ab424b0e"
+    },
+    {
+      "id": "refs/tags/cuckoo-16.3.0",
+      "displayId": "cuckoo-16.3.0",
+      "latestChangeset": "c83220859e4663f6cef2734694895a8da7fce537",
+      "hash": "81216926e228fa059ea74ffa356ec9e2711c91d0"
+    },
+    {
+      "id": "refs/tags/cuckoo-16.2.0",
+      "displayId": "cuckoo-16.2.0",
+      "latestChangeset": "5b14ae3d98f6dbd9d0316ad1918889f4e6cfb8f0",
+      "hash": "593fd8720d30561e1c00852bd94cabc48bc10531"
+    },
+    {
+      "id": "refs/tags/cuckoo-16.1.0",
+      "displayId": "cuckoo-16.1.0",
+      "latestChangeset": "3338d63e9db77a513119095a8f96256410db0a03",
+      "hash": "bf956d507ad3f1abe27a9c53df1795da981ff8d4"
+    },
+    {
+      "id": "refs/tags/cuckoo-16.0.0",
+      "displayId": "cuckoo-16.0.0",
+      "latestChangeset": "9cb80444dab98dcaf6cccb6f31896d391246bb36",
+      "hash": "ac3a542bec37e722d3fccc06ff6273faf54da3b5"
+    },
+    {
+      "id": "refs/tags/cuckoo-15.0.1",
+      "displayId": "cuckoo-15.0.1",
+      "latestChangeset": "238dcf7b2038e0e81adcbf61044b2961edada0b6",
+      "hash": "ab800115b177697b0ed8f5800c0819f2ae37bb32"
+    },
+    {
+      "id": "refs/tags/cuckoo-15.0.0",
+      "displayId": "cuckoo-15.0.0",
+      "latestChangeset": "dcba8c264d9c4b9308943fecf45cb013d5a443de",
+      "hash": "5cf5d3e8b60ca7d51c09aa0eb31660e769e626ba"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.5.3",
+      "displayId": "cuckoo-14.5.3",
+      "latestChangeset": "fcf6d7dbde85e673c890014bde676f2033973552",
+      "hash": "b313905fdd41bcca64fe276688b08a48cf92abb4"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.5.2",
+      "displayId": "cuckoo-14.5.2",
+      "latestChangeset": "21563aeb51205e64766b66f63341b739da2651ba",
+      "hash": "13279820b5f2aac6ed8e95701475403c84a239c8"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.5.1",
+      "displayId": "cuckoo-14.5.1",
+      "latestChangeset": "60586dabaf545a0ecee3c5849cd49ac487c01112",
+      "hash": "1086e2ebfe0f77f2c6901c9c1d5b7653e77aee35"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.5.0",
+      "displayId": "cuckoo-14.5.0",
+      "latestChangeset": "433366fbb85aa6677efc96c57cfc4640821a5754",
+      "hash": "787a08ca905b66f87c34fc0a8d3321f767bd1b50"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.4.1",
+      "displayId": "cuckoo-14.4.1",
+      "latestChangeset": "5c5d91d2f5358ee9e4ceca4c8559f4ecdcff06db",
+      "hash": "b91e16c14344d199a8a8c294fb19dd09448539dc"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.4.0",
+      "displayId": "cuckoo-14.4.0",
+      "latestChangeset": "993ea33fb96f695239ca648a9b003b5104ae726e",
+      "hash": "2c4c069c15ff5af090ff529ca0f5768011e00529"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.3.4",
+      "displayId": "cuckoo-14.3.4",
+      "latestChangeset": "de180a6ad0fe1d580cc05aaf2af8d59351ae6bc2",
+      "hash": "871f889bd9a3b3a29418423f82fb84816dec8e80"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.3.3",
+      "displayId": "cuckoo-14.3.3",
+      "latestChangeset": "e5b952f0827d97cfcc4e25db5814e41ea50cec71",
+      "hash": "9bfe4460158231e9a12cd0ba652074e1b1c86f49"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.3.2",
+      "displayId": "cuckoo-14.3.2",
+      "latestChangeset": "278bdc91d10941861e604634aa5430c0725cd14a",
+      "hash": "f5984caf50994dfa4429a14acab16476451a73f7"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.3.1",
+      "displayId": "cuckoo-14.3.1",
+      "latestChangeset": "817b8fb6e664cd6c9a34fb938e981732e75849ae",
+      "hash": "a2b061ee7e63e4f4f1708f6a1a243beee3b1d738"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.3.0",
+      "displayId": "cuckoo-14.3.0",
+      "latestChangeset": "9973b311bb90f1135d414f92b2bf963f26a1ec3c",
+      "hash": "2517dfc19d7da3991570a8a8117f314ba9365859"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.2.1",
+      "displayId": "cuckoo-14.2.1",
+      "latestChangeset": "84a33678f03de2586e21dc774035d8295da01bd9",
+      "hash": "f38477dae48adc737dc26b9bfd72bc02be2f1e66"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.2.0",
+      "displayId": "cuckoo-14.2.0",
+      "latestChangeset": "0bb6bf2fcc774736ec74a3aa1660aec124f7cc86",
+      "hash": "a8c7adb907b92ea70b425619f45226632d274693"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.1.0",
+      "displayId": "cuckoo-14.1.0",
+      "latestChangeset": "5ae38be04a36f4683323cda692b887e4ee63b1b7",
+      "hash": "a797b4fe5eec78a2dfd4edf053aed95d288cba64"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.0.8",
+      "displayId": "cuckoo-14.0.8",
+      "latestChangeset": "a258ca4ca0fdb7df8de36fe9a346d5229ebf156a",
+      "hash": "628cc9a7f595a4e769e18037ecc74b1d174b3764"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.0.7",
+      "displayId": "cuckoo-14.0.7",
+      "latestChangeset": "4e2aa9ab999f52889e7bf4df3770faab6bbc185d",
+      "hash": "d7dcc0f32262e2f7d8bf1112475f3b934b72f7ff"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.0.6",
+      "displayId": "cuckoo-14.0.6",
+      "latestChangeset": "2d577284cba649ba75b1b6359463d3c232eb8dfc",
+      "hash": "33fb2434dba3dca4534a9e8c72d9040bd1fd31ae"
+    },
+    {
+      "id": "refs/tags/cuckoo-14.0.5",
+      "displayId": "cuckoo-14.0.5",
+      "latestChangeset": "a67f25dba388a42768bff5d6dc7bc7f7e02742d9",
+      "hash": "40fe6bca29009c1e43cca0a7a5e8046b1979dfdf"
+    }
+  ],
+  "start": 0,
+  "nextPageStart": 25
+}

@@ -21,6 +21,8 @@ Example:
       repo: openvz-docs
       username:
       password:
+
+Authentication is enabled when values are given for username/password, otherwise not.
       
 ## Run
 

@@ -1,4 +1,4 @@
-package de.thberger.jigt.config;
+package de.thberger.bitcore.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

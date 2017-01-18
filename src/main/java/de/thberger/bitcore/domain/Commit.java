@@ -1,4 +1,4 @@
-package de.thberger.jigt.domain;
+package de.thberger.bitcore.domain;
 
 import lombok.Getter;
 import lombok.Setter;

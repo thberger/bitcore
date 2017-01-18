@@ -1,4 +1,4 @@
-package de.thberger.jigt.config;
+package de.thberger.bitcore.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,7 @@
-package de.thberger.jigt.service;
+package de.thberger.bitcore.service;
 
-import de.thberger.jigt.domain.Commit;
-import de.thberger.jigt.domain.Page;
+import de.thberger.bitcore.domain.Commit;
+import de.thberger.bitcore.domain.Page;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

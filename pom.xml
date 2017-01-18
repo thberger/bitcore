@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.thberger</groupId>
-    <artifactId>jigt</artifactId>
+    <artifactId>bitcore</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>jigtr</name>
-    <description>JIRA Issues by Git Tag Reporter</description>
+    <name>bitcore</name>
+    <description>BitBucket Contribution Reporter</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -55,7 +55,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
 
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>

@@ -1,8 +1,8 @@
-package de.thberger.jigt.service;
+package de.thberger.bitcore.service;
 
-import de.thberger.jigt.domain.Commit;
-import de.thberger.jigt.domain.Page;
-import de.thberger.jigt.domain.Tag;
+import de.thberger.bitcore.domain.Commit;
+import de.thberger.bitcore.domain.Page;
+import de.thberger.bitcore.domain.Tag;
 import retrofit2.Call;
 import retrofit2.http.GET;
 

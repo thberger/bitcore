@@ -1,6 +1,6 @@
-# JIGTR - JIRA Issues by Git Commits Reporter
+# BitCoRe - BitBucket Contribution Reporter
 
-Simple tool tells you what you committed during the day into your Stash repositories.
+This tool tells you what you committed during the day into your BitBucket/Stash repositories.
  This may come handy in the next daily stand-up meeting.
 
 ## How does it work?

@@ -1,4 +1,4 @@
-package de.thberger.jigt;
+package de.thberger.bitcore;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

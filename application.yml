@@ -1,3 +1,8 @@
+logging.level:
+  root: INFO
+  org.springframework: INFO
+  de.thberger: DEBUG
+
 stashserver:
   base-url: https://src.openvz.org
   project: OVZ

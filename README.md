@@ -1,11 +1,26 @@
-# JIGTR - JIRA Issues by Git Tag Reporter
+# JIGTR - JIRA Issues by Git Commits Reporter
 
-Simple tool to fetch all Git commits that are associated with a certain Git tag 
-and try to extract JIRA issues from the commit messages. Works with Stash and Bitbucket.
+Simple tool tells you what you committed during the day into your Stash repositories.
+ This may come handy in the next daily stand-up meeting.
+
+## How does it work?
+
+The tool fetches all of *your* Git commits spread over multiple repositories. It looks
+up the JIRA summaries if issues are referenced in the commit messages.
+
+## What do I need?
+
+- Java Runtime installed
+- Access to a Stash/BitBucket server
+- Access to a JIRA server (optionally)
+
+## What technologies are used?
 
 The project is based on Spring Boot 1.4.x and Retrofit 2.0.
 
 ## Build
+
+Build it with Maven:
 
     mvn package
     

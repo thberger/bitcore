@@ -1,4 +1,4 @@
-package de.thberger.bitcore.domain;
+package de.thberger.bitcore.stash.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +10,9 @@ import java.util.List;
  */
 @Getter @Setter
 public class Page<T> {
+
+    int start;
+
     int size;
 
     int limit;

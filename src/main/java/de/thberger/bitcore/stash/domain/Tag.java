@@ -1,4 +1,4 @@
-package de.thberger.bitcore.domain;
+package de.thberger.bitcore.stash.domain;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -4,8 +4,15 @@ logging.level:
   de.thberger: DEBUG
 
 stashserver:
-  base-url: https://src.openvz.org
-  project: OVZ
-  repo: openvz-docs
-  username:
-  password:
+      base-url: https://src.openvz.org
+      username:
+      password:
+      filter:
+       author: apavlenko
+      projects:
+       -
+        name: OVZ
+        repos: openvz-docs
+
+
+

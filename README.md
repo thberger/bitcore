@@ -32,10 +32,16 @@ Example:
 
     stashserver:
       base-url: https://src.openvz.org
-      project: OVZ
-      repo: openvz-docs
       username:
       password:
+      projects:
+       -
+        name: OVZ
+        repos: openvz-docs
+        
+     filter:
+      author: thb
+      
 
 Authentication is enabled when values are given for username/password, otherwise not.
       

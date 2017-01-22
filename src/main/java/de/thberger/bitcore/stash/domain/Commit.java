@@ -1,4 +1,4 @@
-package de.thberger.bitcore.domain;
+package de.thberger.bitcore.stash.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +21,9 @@ public class Commit {
 
     @Getter @Setter
     public static class Author {
+
         String name;
         String emailAddress;
+        String slug;
     }
 }

@@ -31,16 +31,15 @@ Edit application.yml and enter the coordinates of your Stash/Bitbucket repo.
 Example:
 
     stashserver:
-      base-url: https://src.openvz.org
-      username:
-      password:
-      projects:
-       -
-        name: OVZ
-        repos: openvz-docs
-        
-     filter:
-      author: thb
+          base-url: https://src.openvz.org
+          username:
+          password:
+          filter:
+           author: apavlenko
+          projects:
+           -
+            name: OVZ
+            repos: openvz-docs
       
 
 Authentication is enabled when values are given for username/password, otherwise not.

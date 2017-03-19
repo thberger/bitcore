@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.util.StringUtils;
 
 /**
  * @author thb
@@ -36,6 +37,10 @@ public class StashServerConfig {
 
     public void setPassword( String base64Password ) {
         this.password = new String( Base64.getDecoder().decode( base64Password ) );
+    }
+
+    public boolean isAuthenticated() {
+        return !StringUtils.isEmpty( username );
     }
 
     @Data

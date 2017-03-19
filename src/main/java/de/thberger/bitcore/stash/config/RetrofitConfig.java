@@ -1,28 +1,20 @@
 package de.thberger.bitcore.stash.config;
 
-import java.net.InetSocketAddress;
-import java.net.Proxy;
-import java.security.cert.CertificateException;
-
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.util.StringUtils;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import okhttp3.Authenticator;
 import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import java.net.Proxy;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * @author thb
@@ -59,39 +51,44 @@ public class RetrofitConfig {
             OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
             if ( stashServerConfig.isIgnoreSslCerts() ) {
-                X509TrustManager unsafeTrustManager = getUnsafeTrustManager();
-                final TrustManager[] trustAllCerts = new TrustManager[] { unsafeTrustManager };
-                // Install the all-trusting trust manager
-                final SSLContext sslContext = SSLContext.getInstance( "SSL" );
-                sslContext.init( null, trustAllCerts, new java.security.SecureRandom() );
-                // Create an ssl socket factory with our all-trusting manager
-                final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-                builder.sslSocketFactory( sslSocketFactory, unsafeTrustManager );
-                builder.hostnameVerifier( ( hostname, session ) -> true );
+                addAllTrustingSslManager(builder);
             }
 
             if ( stashServerConfig.isUseProxy() ) {
-                builder.proxy( httpProxy );
-                builder.proxyAuthenticator( proxyAuthenticator );
+                addProxyAuthenticator(builder);
             }
 
-            boolean isAuthenticated = !StringUtils.isEmpty( stashServerConfig.getUsername() );
-            if ( isAuthenticated ) {
-                builder.addInterceptor( chain -> {
-                    Request original = chain.request();
-                    String basic = Credentials.basic( stashServerConfig.getUsername(), stashServerConfig.getPassword() );
-                    Request.Builder requestBuilder = original.newBuilder()
-                          .header( "Authorization", basic );
-                    requestBuilder.header( "Accept", "application/json" );
-                    requestBuilder.method( original.method(), original.body() );
-                    Request request = requestBuilder.build();
-                    return chain.proceed( request );
-                } );
+            if ( stashServerConfig.isAuthenticated() ) {
+                addBasicAuth(stashServerConfig, builder);
             }
             return builder;
         } catch ( Exception e ) {
             throw new IllegalStateException( "Failed to initialize Http client for BitBucket server!", e );
         }
+    }
+
+    private void addBasicAuth(StashServerConfig stashServerConfig, OkHttpClient.Builder builder) {
+        builder.addInterceptor( chain -> {
+            Request original = chain.request();
+            String basic = Credentials.basic( stashServerConfig.getUsername(), stashServerConfig.getPassword() );
+            Request.Builder requestBuilder = original.newBuilder()
+                  .header( "Authorization", basic );
+            requestBuilder.header( "Accept", "application/json" );
+            requestBuilder.method( original.method(), original.body() );
+            Request request = requestBuilder.build();
+            return chain.proceed( request );
+        } );
+    }
+
+    private void addProxyAuthenticator(OkHttpClient.Builder builder) {
+        builder.proxy( httpProxy );
+        builder.proxyAuthenticator( proxyAuthenticator );
+    }
+
+    private void addAllTrustingSslManager(OkHttpClient.Builder builder) throws NoSuchAlgorithmException, KeyManagementException {
+        UnsafeSslFactory unsafeSslFactory = new UnsafeSslFactory();
+        builder.sslSocketFactory( unsafeSslFactory.createAllTrustingSslFactory(), unsafeSslFactory.getUnsafeTrustManager() );
+        builder.hostnameVerifier( ( hostname, session ) -> true );
     }
 
     @Autowired
@@ -104,23 +101,6 @@ public class RetrofitConfig {
         this.httpProxy = proxy;
     }
 
-    private X509TrustManager getUnsafeTrustManager() {
-        return new X509TrustManager() {
-            @Override
-            public void checkClientTrusted( java.security.cert.X509Certificate[] chain, String authType ) throws CertificateException {
-                // trust all certs
-            }
 
-            @Override
-            public void checkServerTrusted( java.security.cert.X509Certificate[] chain, String authType ) throws CertificateException {
-                // trust all servers
-            }
-
-            @Override
-            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                return new java.security.cert.X509Certificate[] {};
-            }
-        };
-    }
 
 }
